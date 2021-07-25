@@ -28,8 +28,8 @@ module.exports = {
 
   entry: {
     manifest: "./src/manifest.json",
-    background: './src/background/index.js',
-    popup: './src/views/popup/index.js',
+    background: './src/background/index.ts',
+    popup: './src/views/popup/index.tsx',
   },
 
   output: {
@@ -38,7 +38,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.tsx', '.js', '.jsx', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     alias: {
       'webextension-polyfill': 'webextension-polyfill',
     },

@@ -1,0 +1,28 @@
+{
+  "name": "web-extension-boilerplate",
+  "manifest_version": 2,
+  "background": {
+      "scripts": [
+        "background.bundle.js"
+      ],
+      "__chrome|opera__persistent": true
+  },
+  "permissions": [
+      "tabs",
+      "storage",
+      "webRequest",
+      "http://*/*",
+      "https://*/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "web-extension-boilerplate",
+    "__chrome|opera__chrome_style": false,
+    "__firefox__browser_style": false
+  },
+  "__firefox__applications": {
+    "gecko": {
+      "id": "web-extension-boilerplate.extension@gmail.com"
+    }
+  }
+}
