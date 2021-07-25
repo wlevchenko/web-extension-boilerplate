@@ -1,0 +1,45 @@
+{
+  "name": "typescript-web-extension",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "wlevchenko",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev:chrome": "cross-env NODE_ENV=development cross-env TARGET_BROWSER=chrome webpack --watch",
+    "dev:firefox": "cross-env NODE_ENV=development cross-env TARGET_BROWSER=firefox webpack --watch",
+    "dev:opera": "cross-env NODE_ENV=development cross-env TARGET_BROWSER=opera webpack --watch",
+    "build:chrome": "cross-env NODE_ENV=production cross-env TARGET_BROWSER=chrome webpack",
+    "build:firefox": "cross-env NODE_ENV=production cross-env TARGET_BROWSER=firefox webpack",
+    "build:opera": "cross-env NODE_ENV=production cross-env TARGET_BROWSER=opera webpack",
+    "build": "yarn run build:chrome && yarn run build:firefox && yarn run build:opera",
+    "lint": "eslint . --ext .js,.jsx --max-warnings 0",
+    "lint:fix": "eslint . --ext .js,.jsx --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "filemanager-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.2.4",
+    "typescript": "^4.3.5",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "wext-manifest-loader": "^2.3.0",
+    "wext-manifest-webpack-plugin": "^1.2.1"
+  },
+  "dependencies": {
+    "webextension-polyfill": "^0.8.0"
+  }
+}
